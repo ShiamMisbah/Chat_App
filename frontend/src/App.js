@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Route path='/' component={Home} exact/>
-      <Route path='/api/chat' component={ChatPage} />
+      <Route path='/chat' component={ChatPage} />
     </div>
   );
 }

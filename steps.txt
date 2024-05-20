@@ -1,8 +1,7 @@
 Full stack step by step dir
 
-pkg install nodemon
-Backend --> server.js (pkg install express)
-Backend --> data --> data.js
-root --> .env (pkg install dotenv)
-root --> frontend
-root --> front --> pages --> home.js
+Backend -> server.js
+Backend -> routes -> auth.routes.js
+Backend -> controller -> auth.controller.js
+Backend -> db -> connectToMongoDb.js
+Backend -> models -> user.model.js

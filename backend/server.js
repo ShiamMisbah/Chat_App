@@ -1,23 +1,25 @@
-const express = require('express');
-const dotenv = require("dotenv");
-const { chats } = require("./data/data")
+import express from 'express';
+import dotenv from 'dotenv';
+
+import authRoutes from './routes/auth.routes.js'
+import connectToMongoDB from './db/connectToMongoDb.js';
 
 const app = express();
+const PORT = process.env.PORT || 5000;
+
 dotenv.config();
+
+
+// MiddleWare
+app.use('/api/auth', authRoutes)
+
+app.use(express.json());
 
 app.get('/', (req, res)=> {
     res.send("API is running.")
 })
 
-app.get('/api/chat', (req, res)=>{
-    res.send(chats);
-})
-
-app.get('/api/chat/:id', (req, res)=>{
-    const singleChat = chats.find(c=>c._id === req.params.id);
-    res.send(singleChat);
-})
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, console.log(`server started on port ${PORT}.`));
+app.listen(PORT, () => {
+    connectToMongoDB();
+    console.log(`server started on port ${PORT}.`)
+} );
