@@ -1,0 +1,8 @@
+Full stack step by step dir
+
+pkg install nodemon
+Backend --> server.js (pkg install express)
+Backend --> data --> data.js
+root --> .env (pkg install dotenv)
+root --> frontend
+root --> front --> pages --> home.js
