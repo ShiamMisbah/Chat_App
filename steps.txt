@@ -5,3 +5,12 @@ Backend -> routes -> auth.routes.js
 Backend -> controller -> auth.controller.js
 Backend -> db -> connectToMongoDb.js
 Backend -> models -> user.model.js
+Backend -> utils -> generateToken.js
+Starting Message models
+Backend -> models -> message.model.js
+Backend -> models -> conversation.model.js
+Backend -> routes -> message.routes.js
+Backend -> controller -> message.controller.js
+Starting User for sidebar
+Backend -> routes -> user.routes.js
+Backend -> controller -> user.controller.js
