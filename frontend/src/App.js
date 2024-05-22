@@ -1,13 +1,11 @@
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { Route } from 'react-router-dom';
-import Home from './pages/HomePage';
-import ChatPage from './pages/ChatPage';
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup"
+import Home from "./pages/home/Home"
 
 function App() {
   return (
-    <div className="App">
-      <Route path='/' component={Home} exact/>
-      <Route path='/chat' component={ChatPage} />
+    <div className="App p-4 h-screen flex items-center justify-center ">
+      <Home />
     </div>
   );
 }
