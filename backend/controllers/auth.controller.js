@@ -40,7 +40,6 @@ export const signup = async (req, res) => {
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 userName: newUser.userName,
-                password: newUser.password,
                 gender: newUser.gender,
                 profilePic: newUser.profilePic
             })
@@ -72,6 +71,7 @@ export const login = async (req, res) => {
             _id: user._id,
             fullName: user.fullName,
             userName: user.userName,
+            gender: user.gender,
             profilePic: user.profilePic
         })
 
