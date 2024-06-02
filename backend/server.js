@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser';
 import authRoutes from './routes/auth.routes.js';
 import messageRoutes from './routes/message.routes.js';
 import userRoutes from './routes/user.routes.js';
+import devToolRoutes from './routes/devTool.routes.js';
 
 import connectToMongoDB from './db/connectToMongoDb.js';
 
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/dev', devToolRoutes)
 
 app.get('/', (req, res)=> {
     res.send("API is running.")
