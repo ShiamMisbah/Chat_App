@@ -4,7 +4,6 @@ export const deleteAllMessages = async (req,res) => {
     try {
 
         const result = await Message.deleteMany({});
-        console.log(res);
         res.status(200).json({ message: 'All documents deleted', deletedCount: result.deletedCount });
 
     } catch (error) {

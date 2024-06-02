@@ -8,8 +8,8 @@ import userRoutes from './routes/user.routes.js';
 import devToolRoutes from './routes/devTool.routes.js';
 
 import connectToMongoDB from './db/connectToMongoDb.js';
+import { app, server } from './socket/socket.js';
 
-const app = express();
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
@@ -28,7 +28,7 @@ app.get('/', (req, res)=> {
     res.send("API is running.")
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     connectToMongoDB();
     console.log(`server started on port ${PORT}.`)
 } );
